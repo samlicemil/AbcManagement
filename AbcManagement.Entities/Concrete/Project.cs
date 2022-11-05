@@ -1,4 +1,5 @@
 ﻿using AbcManagement.Core.Entities;
+using AbcManagement.Core.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,8 @@ namespace AbcManagement.Entities.Concrete
 
         public int ProjectCategoryId { get; set; }
         public ProjectCategory ProjectCategory { get; set; }
+
+        public int UserId { get; set; }
+        public User  User { get; set; }
     }
 }
