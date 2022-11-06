@@ -11,6 +11,7 @@ namespace AbcManagament.Business.Abstract
     public interface IProjectService
     {
         IDataResult<List<Project>> GetAll();
+        IDataResult<List<Project>> GetUser();
         IDataResult<List<Project>> GetAllByCategoryId(int id);
         IDataResult<Project> GetById(int id);
         IResult Add(Project project);

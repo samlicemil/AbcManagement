@@ -51,7 +51,15 @@ namespace AbcManagament.Business.Concrete
             return new SuccessDataResult<Project>(_projectDAL.Get(p => p.Id == id));
         }
 
-      
+        public IDataResult<List<Project>> GetUser()
+        {
+            ///Dto kullanılarak gerekli dataların web katmanına iletilmesi doğru olan yaklasımdır. 
+            ///validasyon işlemleri yapılacak . 
+
+
+            return new SuccessDataResult<List<Project>>(_projectDAL.GetByUser());
+        }
+
         public IResult Update(Project project)
         {
             // Gerekli Validationlar yapılacak .. 

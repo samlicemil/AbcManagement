@@ -1,6 +1,7 @@
 ﻿using AbcManagament.Business.Abstract;
 using AbcManagement.Core.Entities.Concrete;
 using AbcManagement.DataAccess.Abstract;
+using AbcManagement.DataAccess.Concrete.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,22 +21,22 @@ namespace AbcManagament.Business.Concrete
 
         public void Add(User user)
         {
-            throw new NotImplementedException();
+            _userDAL.Add(user);
         }
 
         public User GetByMail(string email)
         {
-            throw new NotImplementedException();
+            return _userDAL.Get(u => u.Email == email);
         }
 
         public User GetByUserName(string username)
         {
-            throw new NotImplementedException();
+            return _userDAL.Get(u => u.UserName == username);
         }
 
         public List<OperationClaims> GetClaims(User user)
         {
-            throw new NotImplementedException();
+            return _userDAL.GetClaims(user);
         }
     }
 }

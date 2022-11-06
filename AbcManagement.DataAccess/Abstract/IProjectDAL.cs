@@ -10,5 +10,6 @@ namespace AbcManagement.DataAccess.Abstract
 {
     public interface IProjectDAL : IEntityRepository<Project>
     {
+        List<Project> GetByUser();
     }
 }
